@@ -1,0 +1,64 @@
+name: WordPress Installation
+on:
+  push:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  installation:
+    strategy:
+      matrix:
+        wp-version: [ 5.6.5 ]
+        php-version: [7.4]
+
+    name: WordPress Installation
+    # @see https://devdocs.magento.com/marketplace/sellers/installation-and-varnish-tests.html
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Clone DDEV files
+        uses: actions/checkout@v2
+        with:
+          path: .ddev
+
+      - name: Install DDEV
+        run: |
+          # @see https://ddev.readthedocs.io/en/stable/#installationupgrade-script-linux-and-macos-armarm64-and-amd64-architectures
+          sudo apt-get -qq update
+          sudo apt-get -qq -y install libnss3-tools
+          curl -LO https://raw.githubusercontent.com/drud/ddev/master/scripts/install_ddev.sh
+          bash install_ddev.sh
+          ddev config global --instrumentation-opt-in=false --omit-containers=dba,ddev-ssh-agent
+          rm install_ddev.sh
+
+      - name: Set WP_VERSION_CODE env
+        # used in some directory path and conventional file naming
+        # Example : 5.6.5 => wp565
+        run: |
+           echo "WP_VERSION_CODE=$(echo wp${{ matrix.wp-version }} | sed 's/\.//g' )" >> $GITHUB_ENV
+
+
+      - name: Start DDEV for ${{ matrix.wp-version }} with PHP ${{ matrix.php-version }}
+        run: |
+          cp .ddev/config_overrides/config.${{ env.WP_VERSION_CODE }}.yaml .ddev/config.${{ env.WP_VERSION_CODE }}.yaml
+          sed -i -e 's/^php_version:.*/php_version: ${{ matrix.php-version }}/g' .ddev/config.${{ env.WP_VERSION_CODE }}.yaml
+          ddev start
+
+      - name: Install WordPress ${{ matrix.wp-version }} with PHP ${{ matrix.php-version }}
+        run: |
+          wget https://wordpress.org/wordpress-${{ matrix.wp-version }}.tar.gz
+          tar -xf wordpress-${{ matrix.wp-version }}.tar.gz wordpress
+          cp -r wordpress/. ${{ github.workspace }}
+          rm -rf wordpress
+          rm wordpress-${{ matrix.wp-version }}.tar.gz
+          ls -al
+
+      - name: Setup WordPress ${{ matrix.wp-version }} with PHP ${{ matrix.php-version }}
+        run: |
+          ddev start
+          ddev exec wp core install --url='https://${{ env.WP_VERSION_CODE }}.ddev.site' --title='WordPress' --admin_user='admin' --admin_password='admin123' --admin_email='admin@admin.com'
+
+
