@@ -31,7 +31,7 @@ distribution, this should be as simple as
     brew tap drud/ddev && brew install ddev
 
 
-### Prepare DDEV Magento 2 environment
+### Prepare DDEV WordPress environment
 
 The final structure of the project will look like below.
 
