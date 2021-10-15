@@ -4,6 +4,17 @@ The purpose of this repo is to share my WordPress [DDEV-Local](https://ddev.read
 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [Quick start](#quick-start)
+  - [DDEV-Local installation](#ddev-local-installation)
+  - [Prepare DDEV Magento 2 environment](#prepare-ddev-magento-2-environment)
+  - [WordPress installation](#wordpress-installation)
+- [Usage](#usage)
+  - [Test your own module](#test-your-own-module)
+- [License](#license)
+
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Quick start
