@@ -22,3 +22,6 @@
 /nginx_full/nginx-site.conf
 /sequelpro.spf
 /**/README.*
+
+# Additional docker-compose file
+/docker-compose.crowdsec.yaml
