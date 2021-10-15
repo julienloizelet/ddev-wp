@@ -9,7 +9,7 @@ The purpose of this repo is to share my WordPress [DDEV-Local](https://ddev.read
 
 - [Quick start](#quick-start)
   - [DDEV-Local installation](#ddev-local-installation)
-  - [Prepare DDEV Magento 2 environment](#prepare-ddev-magento-2-environment)
+  - [Prepare DDEV WordPress environment](#prepare-ddev-wordpress-environment)
   - [WordPress installation](#wordpress-installation)
 - [Usage](#usage)
   - [Test your own module](#test-your-own-module)
