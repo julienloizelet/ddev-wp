@@ -54,7 +54,6 @@ jobs:
           cp -r wordpress/. ${{ github.workspace }}
           rm -rf wordpress
           rm wordpress-${{ matrix.wp-version }}.tar.gz
-          ls -al
 
       - name: Setup WordPress ${{ matrix.wp-version }} with PHP ${{ matrix.php-version }}
         run: |
