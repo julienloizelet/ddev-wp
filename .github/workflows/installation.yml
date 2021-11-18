@@ -14,7 +14,6 @@ jobs:
         php-version: [7.4]
 
     name: WordPress Installation
-    # @see https://devdocs.magento.com/marketplace/sellers/installation-and-varnish-tests.html
     runs-on: ubuntu-latest
 
     steps:
