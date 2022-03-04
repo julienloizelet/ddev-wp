@@ -70,3 +70,11 @@ jobs:
           tag_name: ${{ github.event.inputs.tag_name }}
           draft: ${{ github.event.inputs.draft }}
           prerelease: ${{ github.event.inputs.prerelease }}
+
+
+      - name: After real Release
+        if: |
+           !github.event.inputs.draft
+           && !github.event.inputs.prerelease
+        run: |
+          echo "This is was a real release"
