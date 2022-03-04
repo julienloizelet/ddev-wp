@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+## [1.4.0] - 2022-03-04
+
+### Added
+- Config for WordPress 5.0, 5.0.1, 5.2, and 5.9
+
 ## [1.3.0] - 2021-12-02
 
 ### Added
