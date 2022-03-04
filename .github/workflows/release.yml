@@ -35,7 +35,7 @@ jobs:
       - name: Check version ${{ env.VERSION_NUMBER }} consistency in CHANGELOG
         run: |
           CURRENT_DATE=$(date +'%Y-%m-%d')
-          CHANGELOG_VERSION=$(grep -E "## \[(.*)\] - $CURRENT_DATE"  CHANGELOG.md | sed 's/ //g')
+          CHANGELOG_VERSION=$(grep -o -E "## \[(.*)\] - $CURRENT_DATE"  CHANGELOG.md | head -1 | sed 's/ //g')
           if [[ $CHANGELOG_VERSION == "##[${{ env.VERSION_NUMBER }}]-$CURRENT_DATE" ]]
           then
               echo "CHANGELOG VERSION OK"
