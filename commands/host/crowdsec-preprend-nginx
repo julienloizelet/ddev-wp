@@ -8,7 +8,7 @@
 
 CURRENT_DIR=${PWD##*/}
 
-if [ $CURRENT_DIR != ".ddev" ];
+if [ "$CURRENT_DIR" != ".ddev" ];
 then
   echo "This script must be run in a .ddev directory"
   exit 1
@@ -25,6 +25,7 @@ case $ACTION in
     ddev exec nginx -s reload
     rm nginx_full/nginx-site.conf
     mv nginx_full/nginx-site.conf.backup nginx_full/nginx-site.conf
+    echo "Done"
     ;;
   remove)
     ddev exec nginx -s reload
