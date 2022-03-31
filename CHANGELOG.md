@@ -5,10 +5,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [1.4.2] - 2022-03-04
+## [2.0.0] - 2022-03-31
 
-### TEST
-- TEST
+### Changed
+- Change DDEV compatibility by using `1.19.1` ddev version
+- Change `find-ip` command for ddev 1.19.1 compatibility
+
+### Added
+- Add `nginx-config` host command to reload nginx configuration with a custom configuration file
+- Add `phpinfo` script
 
 ## [1.4.1] - 2022-03-04
 
