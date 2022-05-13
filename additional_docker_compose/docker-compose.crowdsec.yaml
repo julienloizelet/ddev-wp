@@ -10,6 +10,7 @@ services:
       com.ddev.approot: $DDEV_APPROOT
     volumes:
       - ".:/mnt/ddev_config"
+      - "./custom_files/crowdsec/config.yaml/:/etc/crowdsec/config.yaml:rw"
     environment:
       - DISABLE_AGENT=true
       - VIRTUAL_HOST=$DDEV_HOSTNAME
