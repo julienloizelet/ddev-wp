@@ -59,17 +59,17 @@ mkdir wp-sources
 ```
 - Create an empty `.ddev` folder for DDEV and clone our pre-configured DDEV repo:
 
-```
+```bash
 mkdir wp-sources/.ddev && cd wp-sources/.ddev && git clone git@github.com:julienloizelet/ddev-wp.git ./
 ```
 - Copy some configurations file:
 
-```
+```bash
 cp .ddev/config_overrides/config.wp565.yaml .ddev/config.wp565.yaml
 ```
 - Launch DDEV
 
-```
+```bash
 cd .ddev && ddev start
 ```
 This should take some times on the first launch as this will download all necessary docker images.
@@ -77,11 +77,29 @@ This should take some times on the first launch as this will download all necess
 
 ### WordPress installation
 
+```bash
+cd wp-sources
+wget https://wordpress.org/wordpress-5.6.5.tar.gz
+tar -xf wordpress-5.6.5.tar.gz wordpress
+cp -r wordpress/. ./
+rm -rf wordpress
+rm wordpress-5.6.5.tar.gz
+ddev start
+ddev exec wp core install --url='https://wp565.ddev.site' --title='WordPress' --admin_user='admin' 
+--admin_password='admin123' --admin_email='admin@admin.com'
+
+```
 
 
 ## Usage
 
-### Test your own module
+### Test your own plugin
+
+```bash
+cd wp-sources
+mkdir -p my-own-modules/your-module && cd my-own-modules/your-module
+git clone git@github.com:your-git-repo/your-module-repo.git ./
+```
 
 ## License
 
