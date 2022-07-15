@@ -1,9 +1,17 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/en/)
-and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/)
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+
+## [2.1.0] - 2022-07-15
+
+### Changed
+- Change DDEV compatibility by using `1.19.3` ddev version
+
+### Added
+- Add `maxmind-download` command
 
 ## [2.0.0] - 2022-03-31
 
