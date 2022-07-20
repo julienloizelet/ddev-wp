@@ -20,4 +20,4 @@ services:
     links:
       - crowdsec:crowdsec
     volumes:
-      - ../my-own-modules/crowdsec-bouncer:/var/www/html/wp-content/plugins/cs-wordpress-bouncer:rw
+      - ../my-own-modules/crowdsec-bouncer:/var/www/html/wp-content/plugins/crowdsec:rw
