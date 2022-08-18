@@ -27,3 +27,7 @@
 # Additional docker-compose file
 /docker-compose.crowdsec.yaml
 /docker-compose.playwright.yaml
+/docker-compose.portainer.yaml
+
+# Portainer
+/portainer-data/*
