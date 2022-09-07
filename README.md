@@ -8,11 +8,11 @@ The purpose of this repo is to share my WordPress [DDEV](https://ddev.readthedoc
 **Table of Contents**
 
 - [Quick start](#quick-start)
-  - [DDEV-Local installation](#ddev-local-installation)
+  - [DDEV installation](#ddev-installation)
   - [Prepare DDEV WordPress environment](#prepare-ddev-wordpress-environment)
   - [WordPress installation](#wordpress-installation)
 - [Usage](#usage)
-  - [Test your own module](#test-your-own-module)
+  - [Test your own plugin](#test-your-own-plugin)
 - [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
