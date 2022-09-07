@@ -1,5 +1,8 @@
 # DDEV stack for WordPress
 
+[![Version](https://img.shields.io/github/v/release/julienloizelet/ddev-wp?include_prereleases)](https://github.com/julienloizelet/ddev-wp/releases)
+[![WordPress Installation](https://github.com/julienloizelet/ddev-wp/actions/workflows/installation.yml/badge.svg)](https://github.com/julienloizelet/ddev-wp/actions/workflows/installation.yml)
+
 The purpose of this repo is to share my WordPress [DDEV](https://ddev.readthedocs.io/en/stable/) stack.
 
 
