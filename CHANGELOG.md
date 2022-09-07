@@ -5,6 +5,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [2.2.0] - 2022-09-07
+
+### Changed
+- Change DDEV compatibility by using `1.21.1` ddev version
+- Change `crowdsec` bouncer plugin path
+
+### Added
+- Add `DDEV_EXPECTED_VERSION.txt` file with post-hook to compare current and expected DDEV version
+- Add `portainer` service docker compose file
+
 ## [2.1.0] - 2022-07-15
 
 ### Changed

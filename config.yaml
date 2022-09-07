@@ -13,6 +13,9 @@ mysql_version: ""
 use_dns_when_possible: true
 composer_version: ""
 web_environment: []
+hooks:
+  post-start:
+    - exec: bash .ddev/custom_scripts/check-ddev-version.sh
 
 
 # This config.yaml was created with ddev version v1.17.7

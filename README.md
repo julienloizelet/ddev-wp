@@ -1,6 +1,6 @@
-# DDEV-Local stack for WordPress
+# DDEV stack for WordPress
 
-The purpose of this repo is to share my WordPress [DDEV-Local](https://ddev.readthedocs.io/en/stable/) stack.
+The purpose of this repo is to share my WordPress [DDEV](https://ddev.readthedocs.io/en/stable/) stack.
 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -22,16 +22,16 @@ The purpose of this repo is to share my WordPress [DDEV-Local](https://ddev.read
 _We will suppose that you want to test on a WordPress 5.6.5 instance. Change the version number if you prefer another
 release._
 
-### DDEV-Local installation
+### DDEV installation
 
-This project is fully compatible with DDEV 1.19.3, and it is recommended to use this specific version.
+This project is fully compatible with DDEV 1.21.1, and it is recommended to use this specific version.
 For the DDEV installation, please follow the [official instructions](https://ddev.readthedocs.io/en/stable/#installation).
 On a Linux distribution, you can run:
 ```
 sudo apt-get -qq update
 sudo apt-get -qq -y install libnss3-tools
 curl -LO https://raw.githubusercontent.com/drud/ddev/master/scripts/install_ddev.sh
-bash install_ddev.sh v1.19.3
+bash install_ddev.sh v1.21.1
 rm install_ddev.sh
 ```
 
