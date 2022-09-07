@@ -12,8 +12,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Change `crowdsec` bouncer plugin path
 
 ### Added
-- Add `DDEV_EXPECTED_VERSION.txt` file with post-hook to compare current and expected DDEV version
-- Add `portainer` service docker compose file
+- Add `DDEV_EXPECTED_VERSION.txt` file with post-start hook to compare current and expected DDEV version
+- Add `portainer` service docker-compose file
 
 ## [2.1.0] - 2022-07-15
 
