@@ -49,12 +49,13 @@ wp-sources
 │   │   
 │   │ (Cloned sources of this repo)
 │   
-└───my-own-modules (only if you want to test some of your module(s))
+└───wp-content 
     │   
     │
-    └───yourVendorName-yourModuleName
+    └───plugins
        │   
-       │ (Sources of a module)
+       │
+       └───your-plugin-name (only if you want to test some of your plugin(s))
          
 ```
 
@@ -102,8 +103,8 @@ ddev exec wp core install --url='https://wp565.ddev.site' --title='WordPress' --
 
 ```bash
 cd wp-sources
-mkdir -p my-own-modules/your-module && cd my-own-modules/your-module
-git clone git@github.com:your-git-repo/your-module-repo.git ./
+mkdir -p wp-content/plugins/your-plugin-name && cd wp-content/plugins/your-plugin-name
+git clone git@github.com:your-git-repo/your-plugin-repo.git ./
 ```
 
 ## License
