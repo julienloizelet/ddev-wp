@@ -53,7 +53,7 @@ jobs:
 
       - name: Check DDEV expected version in README and installation.yml
         run: |
-          EXPECTED_VERSION=$(cat .ddev/homeadditions/DDEV_EXPECTED_VERSION.txt)
+          EXPECTED_VERSION=$(cat homeadditions/DDEV_EXPECTED_VERSION.txt)
           README_VERSION_1=$(grep -oP "This project is fully compatible with DDEV \K(.*)," README.md | sed 's/,//g')
           if [[ $README_VERSION_1 == $EXPECTED_VERSION ]]
           then
