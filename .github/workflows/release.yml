@@ -64,17 +64,6 @@ jobs:
               echo $EXPECTED_VERSION
               exit 1
           fi
-
-          README_VERSION_2=$(grep -oP "^bash install_ddev.sh v\K(.*)$" README.md)
-          if [[ $README_VERSION_2 == $EXPECTED_VERSION ]]
-          then
-              echo "README VERSION 2 OK"
-          else
-              echo "README VERSION 2 KO"
-              echo $README_VERSION_2
-              echo $EXPECTED_VERSION
-              exit 1
-          fi
           
           INSTALL_VERSION=$(grep -oP "DDEV_VERSION: v\K(.*)$" .github/workflows/installation.yml)
           if [[ $INSTALL_VERSION == $EXPECTED_VERSION ]]
@@ -113,11 +102,3 @@ jobs:
           tag_name: ${{ github.event.inputs.tag_name }}
           draft: ${{ github.event.inputs.draft }}
           prerelease: ${{ github.event.inputs.prerelease }}
-
-
-      - name: After real Release
-        if: |
-          !github.event.inputs.draft
-          && !github.event.inputs.prerelease
-        run: |
-          echo "This is was a real release"

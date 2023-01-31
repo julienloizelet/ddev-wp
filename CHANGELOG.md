@@ -5,6 +5,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [2.3.0](https://github.com/julienloizelet/ddev-wp/releases/tag/v2.3.0) - 2023-01-31
+[Compare with previous release](https://github.com/julienloizelet/ddev-wp/compare/v2.2.0...v2.3.0)
+### Changed
+- Change DDEV compatibility by using `1.21.4` ddev version
+
 ## [2.2.0](https://github.com/julienloizelet/ddev-wp/releases/tag/v2.2.0) - 2022-09-07
 [Compare with previous release](https://github.com/julienloizelet/ddev-wp/compare/v2.1.0...v2.2.0)
 ### Changed
