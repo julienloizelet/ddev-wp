@@ -28,6 +28,7 @@
 /docker-compose.crowdsec.yaml
 /docker-compose.playwright.yaml
 /docker-compose.portainer.yaml
+/docker-compose.redis-commander.yaml
 
 # Portainer
 /portainer-data/*
