@@ -21,8 +21,8 @@ permissions:
   contents: write
 
 jobs:
-  prepare-release:
-    name: Prepare release
+  create-release:
+    name: Create release
     runs-on: ubuntu-latest
 
     steps:
@@ -117,9 +117,21 @@ jobs:
       - name: Create release ${{ env.VERSION_NUMBER }}
         uses: softprops/action-gh-release@v1
         with:
-          token: ${{ secrets.RELEASE_TOKEN }}
           body_path: CHANGELOG.txt
           name: ${{ env.VERSION_NUMBER }}
           tag_name: ${{ github.event.inputs.tag_name }}
           draft: ${{ github.event.inputs.draft }}
           prerelease: ${{ github.event.inputs.prerelease }}
+
+  after-release:
+    name: After release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test
+        run: |
+          echo "test"
+
+      - name: Test 2
+        run: |
+          echo "test 2"
