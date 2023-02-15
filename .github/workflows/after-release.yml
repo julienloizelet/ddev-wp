@@ -1,0 +1,19 @@
+name: After Release
+on:
+  workflow_dispatch:
+  release:
+    types: [ published ]
+
+jobs:
+  after-release:
+    name: Prepare release
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test
+        run: |
+          echo "test"
+
+      - name: Test 2
+        run: |
+          echo "test 2"

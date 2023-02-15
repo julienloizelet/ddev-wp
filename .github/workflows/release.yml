@@ -1,4 +1,4 @@
-name: Prepare Release
+name: Release
 # example: gh workflow run release.yml -f tag_name=v1.1.4 -f draft=true
 on:
   workflow_dispatch:
@@ -16,6 +16,9 @@ on:
         type: boolean
         description: Prerelease
         default: false
+
+permissions:
+  contents: write
 
 jobs:
   prepare-release:
@@ -114,6 +117,7 @@ jobs:
       - name: Create release ${{ env.VERSION_NUMBER }}
         uses: softprops/action-gh-release@v1
         with:
+          token: ${{ secrets.RELEASE_TOKEN }}
           body_path: CHANGELOG.txt
           name: ${{ env.VERSION_NUMBER }}
           tag_name: ${{ github.event.inputs.tag_name }}
