@@ -6,7 +6,7 @@ on:
 
 jobs:
   after-release:
-    name: Prepare release
+    name: After release
     runs-on: ubuntu-latest
 
     steps:
