@@ -126,6 +126,7 @@ jobs:
   after-release:
     name: After release
     runs-on: ubuntu-latest
+    if: success()
 
     steps:
       - name: Test
